@@ -10,7 +10,7 @@ export default function Header(): JSX.Element {
         <S.ItemMeu active={pathname === '/'}>
           <S.LinkWrapper to="/">Home</S.LinkWrapper>
         </S.ItemMeu>
-        <S.ItemMeu active={pathname.includes('/character')}>
+        <S.ItemMeu active={pathname?.includes('/character')}>
           <S.LinkWrapper to="/character">Character</S.LinkWrapper>
         </S.ItemMeu>
       </S.Menu>

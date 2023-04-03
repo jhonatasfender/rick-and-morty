@@ -31,7 +31,7 @@ export default function List(): JSX.Element {
               <Card key={result.id} result={result} />
             ))}
           </CardGrid>
-          <Pagination renge={renge} page={page} setPage={setPage} />
+          <Pagination renge={renge} page={page} setPage={setPage} total={data.info?.pages}/>
         </>
       )}
 

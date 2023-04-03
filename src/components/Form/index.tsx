@@ -1,3 +1,4 @@
+import { useMemo } from 'react'
 import { FieldErrors, UseFormRegister } from 'react-hook-form'
 
 import { Inputs } from '../../hooks/use-list'
@@ -16,17 +17,21 @@ export default function Form({
   register,
   errors,
 }: FormProps): JSX.Element {
-  console.log(errors)
+  const propsInput = useMemo(
+    () => ({
+      required: { value: true, message: 'Este campo é obrigatório' },
+      minLength: {
+        value: 3,
+        message: 'Para pesquisar é necessário ter pelo menos 3 caracteres',
+      },
+    }),
+    [],
+  )
 
   return (
     <S.Wrapper onSubmit={gatewaySubmit}>
       <S.WrapperInput>
-        <S.Input
-          {...register('name', {
-            required: { value: true, message: 'Este campo é obrigatório' },
-            minLength: { value: 3, message: 'Para pesquisar é necessário ter pelo menos 3 caracteres' },
-          })}
-        />
+        <S.Input {...register('name', propsInput)} />
         {errors.name?.message && <S.Message>{errors.name.message}</S.Message>}
       </S.WrapperInput>
       <S.Button>Pesquisar</S.Button>

@@ -14,7 +14,7 @@ export default function Card({ result }: CardProps): JSX.Element {
   }
 
   return (
-    <S.Wrapper onClick={handleClick}>
+    <S.Wrapper onClick={handleClick} role="listitem">
       <S.Image src={result.image} />
 
       <S.ContentCard>

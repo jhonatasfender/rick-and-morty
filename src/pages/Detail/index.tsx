@@ -1,7 +1,7 @@
 import { useQuery } from 'react-query'
-import { useParams } from 'react-router'
-import Loading from '../../components/Loading'
+import { useParams } from 'react-router-dom'
 
+import Loading from '../../components/Loading'
 import { Result } from '../../hooks/use-list/typings'
 import * as S from './styled'
 

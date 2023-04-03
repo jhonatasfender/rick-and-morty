@@ -32,7 +32,7 @@ type Out = {
   page: number
   errors: FieldErrors<Inputs>
   setPage: Dispatch<SetStateAction<number>>
-  gatewaySubmit: (event?: BaseSyntheticEvent<object, any, any>) => Promise<void>
+  gatewaySubmit: (event?: BaseSyntheticEvent) => Promise<void>
 }
 
 export default function useList(): Out {

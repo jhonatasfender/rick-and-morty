@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> should load the component with default values 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  height: 9rem;
+  padding: 3rem;
+  background-color: rgb(40 37 63 / 75%);
+  z-index: 20;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  color: #ffffff;
+  font-size: 2.9rem;
+  font-weight: bold;
+  list-style-type: none;
+  gap: 8rem;
+}
+
+.c2 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+.c2::after {
+  content: '';
+  background-color: #F6313C;
+  display: block;
+  width: calc(100% + 1rem);
+  margin-left: -0.5rem;
+  height: 1rem;
+  border-radius: 0.4rem;
+}
+
+.c4 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+.c3 {
+  color: #ffffff;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+<div>
+  <nav
+    class="c0"
+  >
+    <ul
+      class="c1"
+    >
+      <li
+        class="c2"
+      >
+        <a
+          class="c3"
+          href="/"
+        >
+          Home
+        </a>
+      </li>
+      <li
+        class="c4"
+      >
+        <a
+          class="c3"
+          href="/character"
+        >
+          Character
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+`;

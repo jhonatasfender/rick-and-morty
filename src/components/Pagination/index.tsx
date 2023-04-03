@@ -5,6 +5,7 @@ import * as S from './styled'
 type PaginationProps = {
   renge: string[]
   page: number
+  total?: number
   setPage: Dispatch<SetStateAction<number>>
 }
 
@@ -12,13 +13,14 @@ export default function Pagination({
   renge,
   page,
   setPage,
+  total,
 }: PaginationProps): JSX.Element {
   const handlePrev = () => {
-    setPage((prev) => prev - 1)
+    setPage((prev) => (prev <= 1 ? prev : prev - 1))
   }
 
   const handleNext = () => {
-    setPage((prev) => prev + 1)
+    setPage((prev) => (total === prev ? prev : prev + 1))
   }
 
   const handleSpecific = (current: string) => {
@@ -28,8 +30,8 @@ export default function Pagination({
   }
 
   return (
-    <S.Wrapper>
-      <S.Prev onClick={handlePrev} />
+    <S.Wrapper aria-label="Pagination Navigation">
+      <S.Prev onClick={handlePrev} aria-hidden="false" />
       {renge.map((num, key) => (
         <S.Item
           active={page.toString() === num}
@@ -39,7 +41,7 @@ export default function Pagination({
           {num}
         </S.Item>
       ))}
-      <S.Next onClick={handleNext} />
+      <S.Next onClick={handleNext} aria-hidden="false" />
     </S.Wrapper>
   )
 }
